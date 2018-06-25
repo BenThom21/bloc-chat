@@ -4,7 +4,6 @@ import './App.css';
 import * as firebase from 'firebase';
 import RoomList from './components/RoomList';
 
-//instructions say to 'copy contents of script tag' - but there are multiple...is that a problem?
 // Initialize Firebase
 var config = {
   apiKey: "AIzaSyAZD-XBeBUsyE0ijFKRMK_itLV6mFi4GfI",
