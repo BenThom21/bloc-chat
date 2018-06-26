@@ -1,5 +1,41 @@
 body {
   margin: 0;
-  padding: 0;
+  padding: 8px;
   font-family: sans-serif;
 }
+
+.App {
+  display: flex;
+  justify-content: flex-start;
+}
+.main, .sidebar {
+  border: 3px solid black;
+  /* padding: 15px; */
+  /* background-color: #fff; */
+}
+.sidebar {
+  /* likely change this height */
+  height: 88vh;
+  width: 33%;
+  background-color: rgb(158, 157, 157);
+  text-align: left;
+}
+.main {
+  width: 66%;
+  /* likely change this height */
+  height: 150vh;
+  background-color: green;
+}
+
+/* RoomList Styling */
+.mainH1 {
+  padding-left: 13px;
+}
+.room-data {
+  padding: 8px 0 8px 15px;
+  font-size: 1.2rem;
+}
+
+
+
+

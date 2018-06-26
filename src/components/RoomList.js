@@ -22,18 +22,28 @@ class RoomList extends Component {
     });
   }
 
+  // createRoom() {
+  //   this.roomsRef.push({
+  //     name: newRoomName
+  //   });
+  // }
 
 
 
   render() {
     return(
-      <section className="room-list">
+      <div className="room-list-div">
+        <section className="room-list">
         {this.state.rooms.map( (room, index) =>
             <div className="room-data" key={index}>
               {room.name} 
             </div>
         )}
-      </section>
+        </section>
+        <form className="newRoom">
+
+        </form>
+      </div>  
     );
   }
 }
