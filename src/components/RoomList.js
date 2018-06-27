@@ -23,12 +23,13 @@ class RoomList extends Component {
   }
 
   createRoom(e) {
+    e.preventDefault();
     this.roomsRef.push({
       name: this.state.newRoomName
     });
+    this.setState({newRoomName: ''})
   }
   handleSubmit(e) {
-    e.preventDefault();
     this.setState({newRoomName: e.target.value});
   }
 

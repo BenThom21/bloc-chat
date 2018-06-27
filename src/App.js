@@ -25,9 +25,11 @@ class App extends Component {
           firebase={firebase}
           />
         </div>
-        <div className="main">
-          <h2>This is the main content</h2>
-        </div>
+        {/* <div className="main">
+          <MessageList
+          firebase={firebase}
+          />
+        </div> */}
       </div>
     );
   }
