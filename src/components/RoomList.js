@@ -28,6 +28,7 @@ class RoomList extends Component {
     });
   }
   handleSubmit(e) {
+    e.preventDefault();
     this.setState({newRoomName: e.target.value});
   }
 
@@ -36,6 +37,12 @@ class RoomList extends Component {
   render() {
     return(
       <div className="room-list-div">
+
+        <form className="newRoom" onSubmit={ (e) => this.createRoom(e) }>
+          <input type="text" placeholder="New Room Name" value={this.state.newRoomName} onChange={(e) => this.handleSubmit(e)}/>
+          <button className="roomButton">Add New Room</button>
+        </form>
+
         <section className="room-list">
         {this.state.rooms.map( (room, index) =>
             <div className="room-data" key={index}>
@@ -43,10 +50,7 @@ class RoomList extends Component {
             </div>
         )}
         </section>
-        <form className="newRoom" onSubmit={ (e) => this.createRoom(e) }>
-          <input type="text" placeholder="New Room Name" value={this.state.newRoomName} onChange={(e) => this.handleSubmit(e)}/>
-          <button className="roomButton">Add New Room</button>
-        </form>
+
       </div>  
     );
   }
