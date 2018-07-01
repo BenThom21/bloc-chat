@@ -23,7 +23,6 @@ class App extends Component {
     this.state= {
       currentRoom: ''
     }
-    this.setCurrentRoom = this.setCurrentRoom.bind(this);
   }
 
   setCurrentRoom(room) {
