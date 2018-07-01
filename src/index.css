@@ -14,7 +14,7 @@ body {
   /* background-color: #fff; */
 }
 .sidebar {
-  /* likely change this height */
+  /* TODO: change this height */
   height: 88vh;
   width: 33%;
   background-color: rgb(158, 157, 157);
