@@ -22,7 +22,6 @@ class MessageList extends Component {
     this.messagesRef.on('child_added', snapshot => {
       const message = snapshot.val();
       console.log(message);
-      console.log(this.props.currentRoom);
       message.key = snapshot.key;
       this.setState({ messages: this.state.messages.concat(message) })
       // console.log(this.state.messages);
@@ -35,7 +34,7 @@ class MessageList extends Component {
       <div className="message-list">
         <h4>{this.props.currentRoom.name}</h4>
         <ul>
-          {this.state.messages.filter(message => message.roomID === this.props.currentRoom).map( (message, index) => <li key={index}>{message.username}: {message.content} - </li>
+          {this.state.messages.filter(message => message.roomID === this.props.currentRoom.key).map( (message, index) => <li key={index}>{message.username}: {message.content} - </li>
           )}
         </ul>
       </div>
