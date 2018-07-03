@@ -37,7 +37,7 @@ class MessageList extends Component {
           )}
         </ul>
       </div>
-    )
+    );
   }
 }
 
