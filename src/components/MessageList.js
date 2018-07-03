@@ -8,7 +8,7 @@ class MessageList extends Component {
     this.state={
       messages: [],
       message: {
-        username: this.props.user ? this.props.user.displayName : 'Guest',
+        username: '',
         content: '',
         roomID: '',
         sentAt: this.props.firebase.database.ServerValue.TIMESTAMP
