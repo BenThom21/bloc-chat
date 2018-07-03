@@ -4,6 +4,7 @@ import './App.css';
 import * as firebase from 'firebase';
 import RoomList from './components/RoomList';
 import MessageList from './components/MessageList';
+import User from './components/User';
 
 // Initialize Firebase
 var config = {
@@ -21,15 +22,21 @@ class App extends Component {
     super(props)
 
     this.state= {
-      currentRoom: ''
+      currentRoom: '',
+      currentUser: ''
     }
 
-    // HELP: Don't understand how this fixes everything
     this.setCurrentRoom = this.setCurrentRoom.bind(this);
+    this.setUser = this.setUser.bind(this);
   }
 
   setCurrentRoom(room) {
     this.setState({currentRoom: room})
+  }
+
+  setUser(user) {
+    console.log(user);
+    this.setState({currentUser: user})
   }
 
 
@@ -38,6 +45,11 @@ class App extends Component {
       <div className="App">
         <div className="sidebar">
           <h1 className="mainH1">Bloc Chat</h1>
+          <User
+          firebase={firebase}
+          setUser={this.setUser}
+          user={this.state.CurrentUser}
+          />
           <RoomList 
           firebase={firebase}
           currentRoom={this.state.currentRoom}
@@ -48,6 +60,8 @@ class App extends Component {
           <MessageList
           firebase={firebase}
           currentRoom={this.state.currentRoom}
+          setUser={this.setUser} 
+          user={this.state.currentUser}
           />
         </div>
       </div>
