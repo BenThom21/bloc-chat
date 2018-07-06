@@ -35,7 +35,7 @@ class App extends Component {
   }
 
   setUser(user) {
-    console.log(user);
+    // console.log(user);
     this.setState({currentUser: user})
   }
 
@@ -47,7 +47,7 @@ class App extends Component {
           <h1 className="mainH1">Bloc Chat</h1>
           <User
           firebase={firebase}
-          setUser={this.setUser}
+          setUser={this.setUser.bind(this)}
           user={this.state.CurrentUser}
           />
           <RoomList 
