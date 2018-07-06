@@ -50,14 +50,14 @@ signOut() {
       //button onclick signout }
 
       <div className="user-btn">
-      {/* is something wrong below? Always stays as 'Guest' */}
+      {/* HELP: is something wrong below? Always stays as 'Guest' */}
         <span> Logged in: {this.props.user ? this.props.user.displayName : 'Guest'} </span>
         <span>
-          {/* {
+          {
             (this.props.user === '')
             ? <button onClick={() => this.signOut()}>Sign Out</button>
             : <button onClick={() => this.signIn()}>Sign In</button>
-          } */}
+          }
 
 
           {/* <button onClick={this.signIn}>
