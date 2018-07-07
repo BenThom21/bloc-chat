@@ -47,8 +47,8 @@ class App extends Component {
           <h1 className="mainH1">Bloc Chat</h1>
           <User
           firebase={firebase}
-          setUser={this.setUser.bind(this)}
-          user={this.state.CurrentUser}
+          setUser={this.setUser}
+          user={this.state.currentUser}
           />
           <RoomList 
           firebase={firebase}
