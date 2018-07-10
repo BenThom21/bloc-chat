@@ -23,11 +23,13 @@ class App extends Component {
 
     this.state= {
       currentRoom: '',
-      currentUser: ''
+      currentUser: '',
+      currentMessage: ''
     }
 
     this.setCurrentRoom = this.setCurrentRoom.bind(this);
     this.setUser = this.setUser.bind(this);
+    this.setMessage = this.setMessage.bind(this);
   }
 
   setCurrentRoom(room) {
@@ -35,8 +37,11 @@ class App extends Component {
   }
 
   setUser(user) {
-    // console.log(user);
     this.setState({currentUser: user})
+  }
+
+  setMessage(message) {
+    this.setState({ currentMessage: message })
   }
 
 
@@ -61,6 +66,8 @@ class App extends Component {
           firebase={firebase}
           currentRoom={this.state.currentRoom}
           user={this.state.currentUser}
+          setUser={this.setUser}
+          setMessage={this.setMessage}
           />
         </div>
       </div>
