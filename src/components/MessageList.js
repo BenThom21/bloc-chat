@@ -24,6 +24,8 @@ class MessageList extends Component {
   componentDidMount() {
     this.messagesRef.on('child_added', snapshot => {
       const message = snapshot.val();
+      console.log(message);
+      console.log(message.content);
       message.key = snapshot.key;
       this.setState({ messages: this.state.messages.concat(message) })
     });
@@ -35,7 +37,7 @@ class MessageList extends Component {
       username: this.props.user ? this.props.user.displayName : 'Guest',
       content: this.state.newMessage,
       //testing roomID changes
-      roomID: this.props.currentRoom.name,
+      roomID: this.props.currentRoom.key,
       sentAt: this.props.firebase.database.ServerValue.TIMESTAMP
     });
     this.setState({newMessage: ''});
