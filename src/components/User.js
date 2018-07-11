@@ -51,7 +51,7 @@ signOut() {
       //button onclick signout }
 
       <div className="user-btn">
-        <span> Logged in: {this.props.user ? this.props.user.displayName : 'Guest'} </span>
+        <span className="logged-in"> Logged in: {this.props.user ? this.props.user.displayName : 'Guest'} </span>
         <span>
           {/* {
             (this.props.user === '')
@@ -66,6 +66,8 @@ signOut() {
           <button onClick={this.signOut}>
             Logout
           </button>
+
+          
         </span>
       </div>
     );

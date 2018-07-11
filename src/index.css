@@ -15,7 +15,7 @@ body {
 }
 .sidebar {
   /* TODO: change this height */
-  height: 88vh;
+  height: 100vh;
   width: 33%;
   background-color: rgb(158, 157, 157);
   text-align: left;
@@ -43,5 +43,38 @@ body {
 
 
 /* MessageList Styling */
+.message-list-container {
+  text-align: left;
+}
+.room-header {
+  font-size: 1.4rem;
+  padding-left: 40px;
+}
+#message-list {
+  list-style: none;
+}
+#message-list li {
+  padding-top: 15px;
+  height: 2rem;
+  width: 75%;
+  background-color: gray;
+}
+.submit-message {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+#submit-text {
+  width: 60%;
+  height: 2rem;
+}
+#submit-button {
+  width: 5%;
+  /* height: 2rem; */
+}
 
 
+/* User Styling */
+.logged-in {
+  padding-left: 13px;
+}
