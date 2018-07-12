@@ -30,44 +30,19 @@ signOut() {
   this.props.firebase.auth().signOut();
 }
 
-//I need a method to track log in status and decide which button to see
-//like bloc jams play/pause button
-// btnHandler(user) {
-//   const loggedIn = <button onClick={() => this.signOut()}>Sign Out</button>;
-//   const loggedOut = <button onClick={() => this.signIn()}>Sign In</button>;
-//   console.log(user);
-
-//   if (this.props.user === '') {
-//     return loggedOut;
-//   } 
-// }
-
 
 
   render() {
     return(
-      //pseudo: 
-      //turnary this.props.user=''  if emptry string ? button - onclick signin : (else)
-      //button onclick signout }
 
       <div className="user-btn">
         <span className="logged-in"> Logged in: {this.props.user ? this.props.user.displayName : 'Guest'} </span>
         <span>
-          {/* {
-            (this.props.user === '')
+          {
+            (this.props.user)
             ? <button onClick={() => this.signOut()}>Sign Out</button>
             : <button onClick={() => this.signIn()}>Sign In</button>
-          } */}
-
-
-          <button onClick={this.signIn}>
-            Login
-          </button>
-          <button onClick={this.signOut}>
-            Logout
-          </button>
-
-          
+          }
         </span>
       </div>
     );
