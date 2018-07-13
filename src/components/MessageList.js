@@ -54,7 +54,7 @@ class MessageList extends Component {
       <div className="message-list-container">
         <h3 className="room-header">{this.props.currentRoom.name}</h3>
         <ul id="message-list">
-          {this.state.messages.filter(message => message.roomID == this.props.currentRoom.key).map( (message, index) => <li key={index}>{message.username}: {message.content} - <Moment format="MM/DD/YYYY hh:mm a">{message.sentAt}</Moment></li>
+          {this.state.messages.filter(message => message.roomID == this.props.currentRoom.key).map( (message, index) => <li key={index}>{message.username} <br></br> {message.content} <Moment className="time" format="hh:mm a">{message.sentAt}</Moment></li>
           )}
         </ul>
         <div className="submit-message">

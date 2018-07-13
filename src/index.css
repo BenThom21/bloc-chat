@@ -1,6 +1,5 @@
 body {
   margin: 0;
-  padding: 8px;
   font-family: sans-serif;
 }
 
@@ -9,31 +8,52 @@ body {
   justify-content: flex-start;
 }
 .main, .sidebar {
-  border: 3px solid black;
-  /* padding: 15px; */
-  /* background-color: #fff; */
+  /* border: 3px solid black; */
 }
 .sidebar {
   /* TODO: change this height */
   height: 100vh;
   width: 33%;
-  background-color: rgb(158, 157, 157);
+  background-color: rgb(165, 34, 34);
   text-align: left;
+  color: white;
+}
+@media (max-width: 830px) {
+  .sidebar, .message-list-container {
+    font-size: .6rem;
+  }
+  .sidebar {
+    min-width: 195px;
+  }
+  .sidebar section .room-data, main h3 .room-header {
+    font-size: .9rem;
+  }
+  input[type="submit"] #submit-button {
+    right: 0;
+  }
+
 }
 .main {
-  width: 66%;
-  /* likely change this height */
+  width: 70%;
+  /* TODO: likely change this height */
   height: 150vh;
-  background-color: green;
+  background-color: rgb(240, 240, 240);
 }
 
 /* RoomList Styling */
 .mainH1 {
   padding-left: 13px;
 }
+.room-list {
+  padding-top: 20px;
+}
 .room-data {
   padding: 8px 0 8px 15px;
   font-size: 1.2rem;
+}
+.room-header {
+  color: rgb(165, 34, 34); 
+  text-transform: uppercase;
 }
 
 .newRoom {
@@ -48,16 +68,24 @@ body {
 }
 .room-header {
   font-size: 1.4rem;
-  /* padding-left: 40px; */
+  padding-left: 40px;
 }
 #message-list {
   list-style: none;
+  overflow: hidden;
+  line-height: 30px;
+}
+ul {
+  padding-left: 0;
 }
 #message-list li {
-  padding-top: 15px;
-  height: 2rem;
+  /* padding-top: 15px; */
+  /* height: 2rem; */
+  line-height: 30px;
+  vertical-align: middle;
   width: 100%;
-  background-color: gray;
+  padding-left: 40px;
+
 }
 .submit-message {
   position: fixed;
@@ -65,20 +93,29 @@ body {
   width: 100%;
 }
 #submit-text {
-  width: 60%;
+  width: 62%;
   height: 2rem;
   background-color: rgb(206, 204, 204);
 }
 
 input[type="submit"] {
-  width: 5%;
+  width: 6%;
   height: 2.45rem;
   border: none;
   border-radius: 0;
-  background-color: rgb(75, 75, 75);
+  background-color: rgb(165, 34, 34);
   color: white;
 
   -webkit-appearance: none;
+}
+.time {
+  position: absolute;
+  right: 10px;
+  width: 75px;
+}
+
+#message-list>li:nth-child(odd) {
+  background-color: rgb(214, 214, 214);
 }
 
 
