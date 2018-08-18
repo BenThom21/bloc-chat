@@ -49,7 +49,7 @@ class App extends Component {
     return (
       <div className="App">
         <div className="sidebar">
-          <h1 className="mainH1">Bloc Chat</h1>
+          <h1 className="mainH1">Ping Me</h1>
           <User
           firebase={firebase}
           setUser={this.setUser}
